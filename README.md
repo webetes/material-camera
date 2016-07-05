@@ -29,13 +29,27 @@ jCenter is the default Maven repository used by Android Studio.
 
 ### Dependency
 
+Add it in your root `build.gradle` at the end of repositories:
+
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+
 Add this in your module's `build.gradle` file:
 
 ```gradle
 dependencies {
     // ... other dependencies
 
-    compile 'com.afollestad:material-camera:0.3.0'
+    compile 'com.github.afollestad:easy-video-player:0.2.8'
+    compile ('com.github.webetes:material-camera:0.3.0') {
+        exclude group: 'com.afollestad', module: 'easyvideoplayer'
+    }
 }
 ```
 
