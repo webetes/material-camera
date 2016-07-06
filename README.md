@@ -47,7 +47,7 @@ dependencies {
     // ... other dependencies
 
     compile 'com.github.afollestad:easy-video-player:0.2.8'
-    compile ('com.github.webetes:material-camera:0.3.1') {
+    compile ('com.github.webetes:material-camera:0.3.2') {
         exclude group: 'com.afollestad', module: 'easyvideoplayer'
     }
 }
